@@ -1,0 +1,110 @@
+exercice 1 :
+
+</head>
+<body>
+<h1> CALCULE SUR LES FIGURE </h1>
+<p> Clique sur le but ton pour calculer le
+prérimetre d'un cercle </p>
+<button onclick= "perimetreC( )"> Lancer la fonction
+</button>
+<p> Clique sur le button pour calculer le
+perimétre d'un rectangle</p>
+<button onclick= "perimetreR()"> Lancer la
+fonction </button>
+<p id="res1" </p
+</body>
+
+function perimetreC(){
+const pi=3.14;
+let r=prompt ("Saisir le rayon ");
+let res= r*2*pi;
+alert("le premiere cercle"+res.toFixed(2));
+console. log(res . toFixed(2));
+  document.getElementById("res1").innerHTML=res;
+}
+
+function perimetreR(){
+  let l=prompt ("Saisir la largeur");
+  let g=prompt ("Saisir la longeur");
+  let resultat = 2*(l+g);
+  alert("le premiere du rectongle "+resultat);
+  console. log(resultat);
+  document.getElementById("res1").innerHTML=resultat;
+}
+
+exercice 2:
+
+function date(){
+  
+    var ladate=new Date() ; 
+    document.write(""  +ladate.getDay()+  "") 
+
+     var tab_jour=new Array("Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi");
+
+   document.getElementByID("getdate").InnerHTML=("On est "+tab_jour[ladate.getDay()]);
+}
+
+<html> 
+<p><h3>Affichage du jour de la semaine </h3></p> 
+<br>
+<input onClick="date()" class="favorite styled"
+       type="button"
+       value="Jour de la semaine">
+<br>
+<br>
+<br>
+<fieldset id="getdate">
+  
+  </fieldset>
+</body>
+</html>
+
+exercice 3 :
+
+<html>
+<head>
+</head>
+<body>
+	<h1>table de multiplication</h1>
+	<br>
+	<button onclick="multi()">Cliquez moi </button>
+	<p id="table">
+	  
+	</p>
+</body>
+</html>
+function multi()
+{
+  var result=document.getElementById('table');
+	let n = prompt("saisir un nombre:");
+	result.innerHTML=
+	"<ul><li>"+n+"*1="+n+
+	"</li><br><li>"+n+"*2="+(n*2)+
+	"</li><br><li>"+n+"*3="+(n*3)+
+	"</li><br><li>"+n+"*4="+(n*4)+
+	"</li><br><li>"+n+"*5="+(n*5)+
+	"</li><br><li>"+n+"*6="+(n*6)+
+	"</li><br><li>"+n+"*7="+(n*7)+
+	"</li><br><li>"+n+"*8="+(n*8)+
+	"</li><br><li>"+n+"*9="+(n*9)+
+	"</li><br><li>"+n+"*10="+(n*10)+"</li></ul>"
+}
+
+exercice 4 :
+<button onclick="compteur()">Cliquez moi pour compter ! </button>
+<br>
+<p id="resultat">
+  Vous avez Cliquer 
+</p>
+<br>
+<button onClick="reset()">remettre le compteur a 0</button>
+
+var increment=0;
+function compteur(){
+  increment = increment+1;
+  document.getElementById("resultat").innerHTML=increment;
+}
+function reset(){
+  increment=0;
+  document.getElementById("resultat").innerHTML=increment;
+}
