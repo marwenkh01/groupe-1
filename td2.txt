@@ -40,7 +40,7 @@ var Personnage = {
 };
 
 
-function CreateP(){
+function CreatePersonnage(){
     let P = Object.create(Personnage)
     P.nom = prompt("Inserer le nom de la personne :")
     P.sante = prompt("Inserer la santé de la personne :")
