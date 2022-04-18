@@ -8,10 +8,10 @@ exercice 1 :
   <body>
     <fieldset>
       <center>
-        <h1>Exercice 1</h1>
-        <button onclick="CreateP()">Creer une personne</button>
+        <h1>Exercice</h1>
+        <button onclick="CreatePersonnage()">Creer une personne</button>
         <button onclick="Show()">Afficher les personnes</button>
-        <button onclick="CreateJ()">Creer un joueur</button>
+        <button onclick="CreateJoeur()">Creer un joueur</button>
         <button onclick="ShowJoueur()">Afficher les joueurs</button>
         <button onclick="CreateA()">Creer un adversaire</button>
         <button onclick="ShowAd()">Afficher les adversaires</button>
@@ -32,7 +32,6 @@ var j=0
 var a =0 
 
 
-// creation de prototype Personnage
 var Personnage = {
   initPerso: function (nom, sante, force) {
     this.nom = nom;
@@ -42,7 +41,6 @@ var Personnage = {
 };
 
 
-//fonction de creation de nouvelle personne
 function CreateP(){
     let P = Object.create(Personnage)
     P.nom = prompt("Inserer le nom de la personne :")
@@ -53,7 +51,7 @@ function CreateP(){
     i+=1
 }
 
-//fonction d'affichage de toutes les personnes
+
 function Show() {
 
     for (i = 0; i < Perso.length; i++) {
@@ -61,21 +59,14 @@ function Show() {
     }
 }
 
-
-
-
-//creation de prototype joueur
-
 var Joueur = Object.create(Personnage);
 
-// ajout du fonction initJoueur
 
 Joueur.initJoueur = function (nom, sante, force) {
-  this.initPerso(nom, sante, force); //appel initperso
+  this.initPerso(nom, sante, force); 
   this.xp = 0;
 };
 
-// ajout de la fonction decrire
 
 Joueur.decrire = function () {
   var description =
@@ -91,10 +82,7 @@ Joueur.decrire = function () {
 };
 
 
-
-
-//fonction de creation de nouveaux joueurs
-function CreateJ(){
+function CreateJoeur(){
     let Jr = Object.create(Joueur)
     Jr.nom = prompt("Inserer le nom du joueur :")
     Jr.sante = prompt("Inserer la santé du joueur :")
@@ -104,24 +92,15 @@ function CreateJ(){
     j+=1
 }
 
-//fonction d'affichage de tous les joueurs
 function ShowJoueur() {
 
     for (j = 0; j < J.length; j++) {
       text.innerHTML += J[j] + "<br>";
     }
-}
-
-
-
-
-
-
-//creation du prototype adversaire 
+} 
 
 var Adversaire = Object.create(Personnage)
 
-//on ajoute la fonction initAdversaire au prototype 
 
 Adversaire.initAdversaire = fonction (nom,sante,force,race,valeur)
 {
@@ -129,13 +108,6 @@ Adversaire.initAdversaire = fonction (nom,sante,force,race,valeur)
     this.race = race
     this.valeur = valeur
 }
-
-
-
-//fonction de création de nouveaux adversaire 
-
-
-
 
 function CreateA(){
     let Ad = Object.create(Adversaire)
@@ -149,7 +121,6 @@ function CreateA(){
     a+=1
 }
 
-//fonction d'affichage de tous les adversaires
 function ShowAd() {
 
     for (a= 0; a < A.length; a++) {
@@ -157,11 +128,17 @@ function ShowAd() {
     }
 }
 
+
+
+
+
+
+
 exercice 2 :
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Exercice 2</title>
+    <title>Exercice</title>
   </head>
   <body>
     <fieldset>
@@ -193,17 +170,15 @@ var Film ={
     }
 }
 
-//creation d'un tableau de films 
 
 var films=[]
 
-//creation d'un film et rangement dans le tableau 
+
 
 var film = Object.create(Film)
 film.init("Ta'ang",2016)
 films.push(film)
 
-//creation d'un film et rangement dans le tableau 
 
 var film = Object.create(Film)
 film.init("Divines",2016)
@@ -213,10 +188,6 @@ films.push(film)
 var film = Object.create(Film)
 film.init("Juste la fin du monde",2016)
 films.push(film)
-
-
-//affichage des films du tableau
-
 
 function show(){
     let content = "<br>"
