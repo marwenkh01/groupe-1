@@ -1,7 +1,6 @@
 exercice 1 :
 
-<!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <title>Exercice 1</title>
   </head>
@@ -135,8 +134,8 @@ function ShowAd() {
 
 
 exercice 2 :
-<!DOCTYPE html>
-<html lang="en">
+
+<html>
   <head>
     <title>Exercice</title>
   </head>
